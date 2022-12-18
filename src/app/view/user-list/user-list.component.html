@@ -1,5 +1,5 @@
 <ul>
 	<li *ngFor="let user of users">
-		<user-list-item [user]="user"></user-list-item>
+		{{ user.id }} {{ user.first_name }} {{ user.last_name }}
 	</li>
 </ul>

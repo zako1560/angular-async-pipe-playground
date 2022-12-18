@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './view/user-list/user-list.component';
-import { UserListItemComponent } from './view/user-list-item/user-list-item.component';
+import { MyAsyncPipe } from './pipe/my-async.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserListItemComponent,
+    MyAsyncPipe,
   ],
   imports: [
     BrowserModule,
