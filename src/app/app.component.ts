@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-async-pipe-playground';
+
+  users$ = this.userService.users$;
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.userService.fetchUsers();
+  }
 }
